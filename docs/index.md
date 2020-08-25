@@ -15,9 +15,24 @@ This paper documents the process of creating a Python script that demonstrates p
 
 
 ### Script Overview
+
+https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture2.png
+https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture3.png
+https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture4.png
+https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture5.png
+https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture6.png
+
 ### Pickling
 #### Loading Data with Pickle
+https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture7.png
+https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture8.png
+https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture9.png
+
+
 #### Saving Data with Pickle 
+https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture10.png
+
+
 #### Pickling Research
 ### Exception Handling
 #### Built-in Exceptions
