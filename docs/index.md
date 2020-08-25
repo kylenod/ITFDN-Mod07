@@ -34,8 +34,8 @@ The processing section includes custom functions for processing, input/output fu
 ![Processing Functions](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture3.png "Processing Functions")
 Figure 3. Processing Functions
 
-![Input/Output Funcitons](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture4.png "Input/Output Funcitons")
-Figure 4. Input/Output Funcitons
+![Input/Output Functions](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture4.png "Input/Output Functions")
+Figure 4. Input/Output Functions
 
 ![Custom Exceptions](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture5.png "Custom Exceptions")
 Figure 5. Custom Exceptions
@@ -95,17 +95,14 @@ Pickling can also be used to store data. In the function save_data_to_file, I us
 ```
 Listing 3
 
-
 #### Pickling Research
 While working on this script, I read through several online resources about Python pickle. The one I found most useful was a Medium article appropriately titled **Pickling in Python** by Alison Salerno. I appreciated that was a high-level overview that did not presuppose prior knowledge of other programming languages. Other articles either seemed to provide a comprehensive overview of pickling parameters or were meant to address specific use-cases for developers. This article concisely distilled high-level concepts, balancing prose with images and code examples. The article is available at the following link:
 
 https://medium.com/swlh/pickling-in-python-ac3c7a045ae5
 
-
 ### Exception Handling
 #### Built-in Exceptions
-
-Another concept explored thoroughly in week 7 was Try-Except error handling. When an error occurs while running Python, the program provides information on the type of error the occurred. For example, if you try to cast a string of letters as an integer, Python will return a ValueError, because it cannot perform that function on that value (Figure 10):
+Another concept explored thoroughly in week 7 was Try-Except error handling. When an error occurs while running Python, the program provides information on the type of error that occurred. For example, if you try to cast a string of letters as an integer, Python will return a ValueError, because it cannot perform that function on that value (Figure 10):
 ![Built-in ValueError in Python](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture10.png "Built-in ValueError in Python")
 Figure 10. Built-in ValueError in Python
 
@@ -222,7 +219,6 @@ Figure 17. Excpetion Handling for Custom Exception StopError
 
 ## Running in Terminal 
 Next, I ran the program in Terminal as a Console application. Figures 18-22 show the programs tasks and exceptions performing correctly.
-
 
 ![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture17.png)
 Figure 18. View Client List
