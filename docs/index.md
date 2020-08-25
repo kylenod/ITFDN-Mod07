@@ -32,7 +32,28 @@ Figure 5. Custom Exceptions
 Figure 6. Main Boy of Script
 
 ### Pickling
+
+
+```
+import pickle
+```
+Listing 1
+
 #### Loading Data with Pickle
+
+
+```
+def read_data_from_file(file_name, list_of_clients):
+    try:
+         objFile = open(file_name, "rb")
+         list_of_clients = pickle.load(objFile)
+          objFile.close()
+     except FileNotFoundError:
+         print("I see you haven't started a database yet!\nThat's okay! We're here to help you get started.\n")
+     return list_of_clients
+```
+
+
 ![Binary File in Text Editor](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture7.png "Binary File in Text Editor")
 Figure 7. Binary File in Text Editor
 
@@ -44,6 +65,15 @@ Figure 9. Print Data Loaded from Binary File with Pickle
 
 #### Saving Data with Pickle 
 
+```
+    def save_data_to_file(file_name, list_of_clients):
+        object_file = open(file_name, "wb")
+        pickle.dump(list_of_clients, object_file)
+        object_file.close()
+        return list_of_clients
+```
+Listing 2
+
 
 #### Pickling Research
 
@@ -54,14 +84,78 @@ Figure 9. Print Data Loaded from Binary File with Pickle
 ![Built-in ValueError in Python](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture10.png "Built-in ValueError in Python")
 Figure 10. Built-in ValueError in Python
 
+
+```
+def read_data_from_file(file_name, list_of_clients):
+    try:
+         objFile = open(file_name, "rb")
+         list_of_clients = pickle.load(objFile)
+          objFile.close()
+     except FileNotFoundError:
+         print("I see you haven't started a database yet!\nThat's okay! We're here to help you get started.\n")
+     return list_of_clients
+```
+Listing 3
+
 ![FileNotFoundError without Exception Clause in Script](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture11.png "FileNotFoundError without Exception Clause in Script")
 Figure 11. FileNotFoundError without Exception Clause in Script
 
 ![FileNotFoundError with Excpetion Handling in Script](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture12.png "FileNotFoundError with Excpetion Handling in Script")
 Figure 12. FileNotFoundError with Excpetion Handling in Script
 
+```
+    def get_client_data():
+        client = str(input("Enter name: \n ").capitalize())
+        while True:
+            try:
+                age = int(input("Enter age: \n "))
+                break
+            except ValueError:
+                print("Please enter age as the nearest round number!")
+```
+Listing 4
+
 
 #### Custom Excpetions
+
+```
+class ValueTooLargeError(Exception):
+    """ Value too large for menu input """
+    def __str__(self):
+        return '"Please select an option between 1-5!"'
+
+class StopError(Exception):
+    """ Close program  """
+    def __str__(self):
+        return 'Closing Program...Goodbye!'
+```
+Listing 5
+
+
+```
+while True:
+    IO.print_menu_tasks()
+    try:
+        strChoice = IO.input_menu_choice()
+        if strChoice in ["quit", "close", "leave", "exit", "stop"]:
+            raise StopError
+        intChoice = int(strChoice)
+        if intChoice > 5:
+            raise ValueTooLargeError
+    except ValueError:
+            print("Please provide a number input!")
+    except ValueTooLargeError as e:
+        print(e)
+    except StopError as e:
+        print(e)
+        break
+    else:
+        if intChoice == 1:
+```
+Listing 6
+
+
+
 #### Exception Handling Research
 ## Testing in PyCharm  
 
