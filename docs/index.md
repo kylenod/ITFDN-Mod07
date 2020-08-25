@@ -202,6 +202,7 @@ Both pages provide high-level information about exceptions without including too
 
 
 ## Testing in PyCharm  
+Once the script was completed, I tested it in Pycharm. Figures 13-17 show each of the exceptions being handled by the program as expected.
 
 ![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture13.png)
 Figure 13. Exception Handling for FileNotFoundError in Script
@@ -212,7 +213,6 @@ Figure 14. Exception Handling for ValueError in Script - 1
 ![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture15.png)
 Figure 15. Exception Handling for ValueError in Script - 2
 
-
 ![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture16.png)
 Figure 16. Exception Handling for Custom Exception ValueTooLargeError
 
@@ -221,6 +221,7 @@ Figure 17. Excpetion Handling for Custom Exception StopError
 
 
 ## Running in Terminal 
+Next, I ran the program in Terminal as a Console application. Figures 18-22 show the programs tasks and exceptions performing correctly.
 
 
 ![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture17.png)
@@ -239,7 +240,7 @@ Figure 21. Custom Exception ValueTooLargeError
 Figure 22. Custom Exception StopError
 
 ## Checking the Binary File 
-
+As a final step, I checked the binary file "ClientData.dat" that the pickled data was saved to. Figure 23 shows the data from the previous step had been saved to the file.
 ![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture22.png)
 Figure 23. Viewing Data with Saved Binary Data
 
