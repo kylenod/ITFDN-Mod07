@@ -78,7 +78,7 @@ Figure 15. Exception Handling for ValueError in Script - 2
 ![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture16.png)
 Figure 16. Exception Handling for Custom Exception ValueTooLargeError
 
-![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture17.png)
+![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/PictureLOST.png)
 Figure 17. Excpetion Handling for Custom Exception StopError
 
 
