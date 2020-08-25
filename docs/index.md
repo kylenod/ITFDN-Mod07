@@ -52,7 +52,7 @@ def read_data_from_file(file_name, list_of_clients):
          print("I see you haven't started a database yet!\nThat's okay! We're here to help you get started.\n")
      return list_of_clients
 ```
-
+Listing 2
 
 ![Binary File in Text Editor](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture7.png "Binary File in Text Editor")
 Figure 7. Binary File in Text Editor
@@ -72,7 +72,7 @@ Figure 9. Print Data Loaded from Binary File with Pickle
         object_file.close()
         return list_of_clients
 ```
-Listing 2
+Listing 3
 
 
 #### Pickling Research
@@ -95,7 +95,7 @@ def read_data_from_file(file_name, list_of_clients):
          print("I see you haven't started a database yet!\nThat's okay! We're here to help you get started.\n")
      return list_of_clients
 ```
-Listing 3
+Listing 4
 
 ![FileNotFoundError without Exception Clause in Script](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture11.png "FileNotFoundError without Exception Clause in Script")
 Figure 11. FileNotFoundError without Exception Clause in Script
@@ -113,7 +113,7 @@ Figure 12. FileNotFoundError with Excpetion Handling in Script
             except ValueError:
                 print("Please enter age as the nearest round number!")
 ```
-Listing 4
+Listing 5
 
 
 #### Custom Excpetions
@@ -129,7 +129,7 @@ class StopError(Exception):
     def __str__(self):
         return 'Closing Program...Goodbye!'
 ```
-Listing 5
+Listing 6
 
 
 ```
@@ -152,7 +152,7 @@ while True:
     else:
         if intChoice == 1:
 ```
-Listing 6
+Listing 7
 
 
 
