@@ -6,19 +6,31 @@ Assignment07
 # Pickling and Exception Handling in Python 
 
 ## Introduction  
-This paper documents the process of creating a Python script that demonstrates pickling and structured error-handling. The product of this week’s assignment is a simple program, Assignment07.py, that lets dog-oriented businesses manage their database of dog clients. Topics covered in this assignment include binary files and Exceptions, which were part of week 7’s lessons. Additionally, the paper discusses online resources that were used for this assignment. 
+This paper documents the process of creating a Python script that demonstrates pickling and structured error-handling. The product of this week’s assignment is a simple program, Assignment07.py, that lets dog-oriented businesses manage their database of dog clients. Topics covered in this assignment include binary files and exceptions. Additionally, the paper discusses online resources that were used for this assignment. 
 
 ## Writing the Script 
-
+Assignment07.py was created from scratch in PyCharm. Although it did not have a starting template, the structure of the script and several of its custom functions were based on previous assignments. As a first step, I created a new Python project in the Assignment07 directory and updated the header for this project (Figure 1).
 
 ![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture1.png "Screenshot of Script in PyCharm")
 Figure 1. Screenshot of Script in PyCharm
 
-### Script Overview
+This program is designed to be used by dog-oriented businesses, such as groomers, dog-walkers and boarders. When users launch the program, they can select one of the following options to help manage their dog database:
+1)	View a list of their clients by name
+2)	Add a new client
+3)	Search information for a specific client
+4)	Save new data to their database
+5)	Exit the program
 
+
+
+### Script Overview
+The script has three main sections – data, processing and presentation. 
+
+The data layer declares objects that are used by the program (Figure 2).
 ![Data Section of Script](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture2.png "Data Section of Script")   
 Figure 2. Data Section of Script  
 
+The processing section includes custom functions for processing, input/output function and custom exception classes (Figure 3-5).
 ![Processing Functions](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture3.png "Processing Functions")
 Figure 3. Processing Functions
 
@@ -28,19 +40,23 @@ Figure 4. Input/Output Funcitons
 ![Custom Exceptions](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture5.png "Custom Exceptions")
 Figure 5. Custom Exceptions
 
+The last section is the main body of the script, which provides logic for calling functions and interacting with users (Figure 6).
+
 ![Main Boy of Script](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture6.png "Main Boy of Script")
 Figure 6. Main Boy of Script
 
 ### Pickling
+In previous assignments, I have read, written and appended data to text files. In contrast, this week’s program uses pickling to load and save data to a binary file. There are several reasons to pickle data instead of using a text file. First, pickling can preserve the structure of complex Python objects which might otherwise be lost when saving to a text file. Second, pickling is used with binary files which take up less memory than other types of files. Some of the limitations of pickling include the fact it can only work with certain types of objects, is limited to Python structures, and the output is not user-friendly (i.e. difficult to read).
 
 
+The first line of the Assignment07.py script imports the pickle module so that pickle functions can be used later in the script:
 ```
 import pickle
 ```
 Listing 1
 
 #### Loading Data with Pickle
-
+The first custom function, read_data_from_file(), uses pickle.load() to read data from a binary file (the objFile is assigned to the file ClientData.dat in the data section). More specifically, the function is “de-serializing” data into Python data structures from the binary stream that it was previously saved to.  
 
 ```
 def read_data_from_file(file_name, list_of_clients):
@@ -53,6 +69,8 @@ def read_data_from_file(file_name, list_of_clients):
      return list_of_clients
 ```
 Listing 2
+
+The pickle.load() function will only load one object at a time (picking up where it left off within the open file). In this case, the program saves the database to a single list object that can be loaded all at once, otherwise that would have to be further accounted for in the program. The file is opened in “rb” or “read binary” mode, because it needs to read data from a binary file.
 
 ![Binary File in Text Editor](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture7.png "Binary File in Text Editor")
 Figure 7. Binary File in Text Editor
