@@ -213,7 +213,7 @@ Figure 17. Excpetion Handling for Custom Exception StopError
 
 
 ## Running in Terminal 
-Next, I ran the program in Terminal as a Console application. Figures 18-22 show the programs tasks and exceptions performing correctly.
+Next, I ran the program in Terminal as a Console application. Figures 18-22 show the program's tasks and exceptions performing correctly.
 
 ![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture17.png)
 Figure 18. View Client List
