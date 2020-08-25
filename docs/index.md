@@ -11,7 +11,7 @@ This paper documents the process of creating a Python script that demonstrates p
 ## Writing the Script 
 Assignment07.py was created from scratch in PyCharm. Although it did not have a starting template, the structure of the script and several of its custom functions were based on previous assignments. As a first step, I created a new Python project in the Assignment07 directory and updated the header for this project (Figure 1).
 
-![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture1.png "Screenshot of Script in PyCharm")
+![New Script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture1.png "New Script in PyCharm")
 Figure 1. Screenshot of Script in PyCharm
 
 This program is designed to be used by dog-oriented businesses, such as groomers, dog-walkers and boarders. When users launch the program, they can select one of the following options to help manage their dog database:
@@ -21,10 +21,8 @@ This program is designed to be used by dog-oriented businesses, such as groomers
 4)	Save new data to their database
 5)	Exit the program
 
-
-
 ### Script Overview
-The script has three main sections – data, processing and presentation. 
+The script has three main sections: data, processing and presentation. 
 
 The data layer declares objects that are used by the program (Figure 2).
 ![Data Section of Script](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture2.png "Data Section of Script")   
@@ -48,7 +46,6 @@ Figure 6. Main Boy of Script
 ### Pickling
 In previous assignments, I have read, written and appended data to text files. In contrast, this week’s program uses pickling to load and save data to a binary file. There are several reasons to pickle data instead of using a text file. First, pickling can preserve the structure of complex Python objects which might otherwise be lost when saving to a text file. Second, pickling is used with binary files which take up less memory than other types of files. Some of the limitations of pickling include the fact it can only work with certain types of objects, is limited to Python structures, and the output is not user-friendly (i.e. difficult to read).
 
-
 The first line of the Assignment07.py script imports the pickle module so that pickle functions can be used later in the script:
 ```
 import pickle
@@ -56,7 +53,7 @@ import pickle
 Listing 1
 
 #### Loading Data with Pickle
-The first custom function, read_data_from_file(), uses pickle.load() to read data from a binary file (the objFile is assigned to the file ClientData.dat in the data section). More specifically, the function is “de-serializing” data into Python data structures from the binary stream that it was previously saved to.  
+The first custom function, **read_data_from_file()**, uses **pickle.load()** to read data from a binary file (the objFile is assigned to the file ClientData.dat in the data section). More specifically, the function is “de-serializing” data into Python data structures from the binary stream that it was previously saved to.  
 ```
 def read_data_from_file(file_name, list_of_clients):
     try:
@@ -69,8 +66,7 @@ def read_data_from_file(file_name, list_of_clients):
 ```
 Listing 2
 
-The pickle.load() function will only load one object at a time (picking up where it left off within the open file). In this case, the program saves the database to a single list object that can be loaded all at once, otherwise that would have to be further accounted for in the program. The file is opened in “rb” or “read binary” mode, because it needs to read data from a binary file.
-
+The **pickle.load()** function will only load one object at a time (picking up where it left off within the open file). In this case, the program saves the database to a single list object that can be loaded all at once, otherwise that would have to be further accounted for in the program. The file is opened in “rb” or “read binary” mode, because it needs to read data from a binary file.
 
 Figure 7 shows how binary data appears within a text editor. Although the format is not user-friendly, it is still somewhat interpretable.
 ![Binary File in Text Editor](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture7.png "Binary File in Text Editor")
@@ -85,7 +81,7 @@ Figure 8. Loading Data with Pickle
 Figure 9. Print Data Loaded from Binary File with Pickle
 
 #### Saving Data with Pickle 
-Pickling can also be used to store data. In the function save_data_to_file, I use pickle.dump() to “serialize” the current client data back to the binary format. In this case, the file is opened in “wb” or “write binary” mode to write data to a binary file.
+Pickling can also be used to store data. In the function **save_data_to_file**, I use **pickle.dump()** to “serialize” the current client data back to the binary format. In this case, the file is opened in “wb” or “write binary” mode to write data to a binary file.
 ```
     def save_data_to_file(file_name, list_of_clients):
         object_file = open(file_name, "wb")
@@ -102,11 +98,11 @@ https://medium.com/swlh/pickling-in-python-ac3c7a045ae5
 
 ### Exception Handling
 #### Built-in Exceptions
-Another concept explored thoroughly in week 7 was Try-Except error handling. When an error occurs while running Python, the program provides information on the type of error that occurred. For example, if you try to cast a string of letters as an integer, Python will return a ValueError, because it cannot perform that function on that value (Figure 10):
+Another concept explored thoroughly in week 7 was structured error handling. When an error occurs while running Python, the program provides information on the type of error that occurred. For example, if you try to cast a string of letters as an integer, Python will return a ValueError, because it cannot perform that function on that value (Figure 10):
 ![Built-in ValueError in Python](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture10.png "Built-in ValueError in Python")
 Figure 10. Built-in ValueError in Python
 
-Although we ideally prefer to avoid errors, there are many instances in which its helpful to identify different types of errors so that they can be handled appropriately within a program. Python has a large number of built-in errors known as exceptions that can be leveraged for this purpose. In the read_data_from_file() function used at the beginning of the script, I employed try-except clauses and the built-in FileNotFoundError to handle instances in which the file being read does not yet exist. 
+Although we ideally prefer to avoid errors, there are many instances in which it is helpful to identify different types of errors so that they can be handled appropriately within a program. Python has a large number of built-in errors known as exceptions that can be leveraged for this purpose. In the **read_data_from_file()** function used at the beginning of the script, I employed try-except clauses and the built-in FileNotFoundError to handle instances in which the file being read does not yet exist. 
 ```
 def read_data_from_file(file_name, list_of_clients):
     try:
@@ -127,7 +123,7 @@ Figure 11. FileNotFoundError without Exception Clause in Script
 ![FileNotFoundError with Excpetion Handling in Script](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture12.png "FileNotFoundError with Excpetion Handling in Script")
 Figure 12. FileNotFoundError with Excpetion Handling in Script
 
-In the get_client_data() function, I create an except clause for the built-in ValueError to catch instances in which the “age” input cannot be cast as an integer.
+In the **get_client_data()** function, I create an except clause for the built-in ValueError to catch instances in which the “age” input cannot be cast as an integer.
 ```
     def get_client_data():
         client = str(input("Enter name: \n ").capitalize())
@@ -157,7 +153,7 @@ class StopError(Exception):
 ```
 Listing 6
 
-The ValueTooLargeError catches instances in which the user menu option input is an integer above 5 (the menu options are 1-5).
+The ValueTooLargeError catches instances in which the user input is an integer above 5 (the menu options are 1-5).
 
 The StopError handles instances in which the user has implemented a non-integer string that clearly indicates they want to leave the program. This error is included to distinguish these inputs from more generic ValueErrors in which the user has simply entered a non-integer value.
 
@@ -184,11 +180,11 @@ while True:
 ```
 Listing 7
 
-When users provide an input, I first check to see if the string matches any “quit” words. I then raise the custom StopError, which prints the string from the Exception and breaks the loop. 
+When users provide an input, I first check to see if the string matches any “quit” words. If it does, it raises the custom StopError, which prints the string from the Exception and breaks the loop. 
 
-Next, I cast the input as an integer. If the input string cannot be cast as an integer, it will automatically raise a ValueError and go to the exception clauses for ValueError. If the input is an integer above 5, it was reach the ValueTooLargeError. Note that for the custom classes, the errors must be manually raised through logic built into the program. 
+Next, I cast the input as an integer. If the input string cannot be cast as an integer, it will automatically raise a ValueError and go to the exception clauses for ValueError. If the input is an integer above 5, it will reach the ValueTooLargeError. Note that for the custom classes, the errors must be manually raised through logic built into the program. 
 
-If none of the exceptions are raised, the program goes to the else clause and executes one of the menu functions.
+If none of the exceptions are raised, the program goes to the else clause and executes one of the menu tasks.
 
 #### Exception Handling Research
 I found two sites that were particularly helpful for learning about exception handling:
@@ -196,7 +192,6 @@ I found two sites that were particularly helpful for learning about exception ha
 •	Programiz (https://www.programiz.com/python-programming/user-defined-exception)
 
 Both pages provide high-level information about exceptions without including too much technical detail or requiring background knowledge of programming. The visual layouts make them easy to navigate and both use abundant images to help illustrate their points. Programiz has the additional feature of allowing visitors to run code directly on their site.
-
 
 ## Testing in PyCharm  
 Once the script was completed, I tested it in Pycharm. Figures 13-17 show each of the exceptions being handled by the program as expected.
@@ -241,3 +236,4 @@ As a final step, I checked the binary file "ClientData.dat" that the pickled dat
 Figure 23. Viewing Data with Saved Binary Data
 
 ## Summary 
+This paper documents the process of creating and testing a basic program that uses pickling and structured error handling in Python. It includes an overview of both topics, as well as some recommended resources for learning about them. 
