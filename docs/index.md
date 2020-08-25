@@ -11,35 +11,35 @@ This paper documents the process of creating a Python script that demonstrates p
 ## Writing the Script 
 
 
-![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture1.png "Script in PyCharm")
+![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture1.png "Screenshot of Script in PyCharm")
 Figure 1. Screenshot of Script in PyCharm
 
 ### Script Overview
 
-![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture2.png)   
+![Data Section of Script](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture2.png "Data Section of Script")   
 Figure 2. Data Section of Script  
 
-![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture3.png)
+![Processing Functions](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture3.png "Processing Functions")
 Figure 3. Processing Functions
 
-![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture4.png)
+![Input/Output Funcitons](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture4.png "Input/Output Funcitons")
 Figure 4. Input/Output Funcitons
 
-![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture5.png)
+![Custom Exceptions](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture5.png "Custom Exceptions")
 Figure 5. Custom Exceptions
 
-![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture6.png)
+![Main Boy of Script](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture6.png "Main Boy of Script")
 Figure 6. Main Boy of Script
 
 ### Pickling
 #### Loading Data with Pickle
-![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture7.png)
+![Binary File in Text Editor](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture7.png "Binary File in Text Editor")
 Figure 7. Binary File in Text Editor
 
-![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture8.png)
+![Loading Data with Pickle](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture8.png "Loading Data with Pickle")
 Figure 8. Loading Data with Pickle
 
-![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture9.png)
+![Print Data Loaded from Binary File with Pickle](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture9.png "Print Data Loaded from Binary File with Pickle")
 Figure 9. Print Data Loaded from Binary File with Pickle
 
 #### Saving Data with Pickle 
@@ -51,13 +51,13 @@ Figure 9. Print Data Loaded from Binary File with Pickle
 ### Exception Handling
 #### Built-in Exceptions
 
-![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture10.png)
+![Built-in ValueError in Python](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture10.png "Built-in ValueError in Python")
 Figure 10. Built-in ValueError in Python
 
-![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture11.png)
+![FileNotFoundError without Exception Clause in Script](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture11.png "FileNotFoundError without Exception Clause in Script")
 Figure 11. FileNotFoundError without Exception Clause in Script
 
-![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture12.png)
+![FileNotFoundError with Excpetion Handling in Script](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture12.png "FileNotFoundError with Excpetion Handling in Script")
 Figure 12. FileNotFoundError with Excpetion Handling in Script
 
 
