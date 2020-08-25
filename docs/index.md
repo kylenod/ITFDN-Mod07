@@ -54,10 +54,34 @@ Figure 9. Print Data Loaded from Binary File with Pickle
 ![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture10.png)
 Figure 10. Built-in ValueError in Python
 
+![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture11.png)
+Figure 11. FileNotFoundError without Exception Clause in Script
+
+![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture12.png)
+Figure 12. FileNotFoundError with Excpetion Handling in Script
+
 
 #### Custom Excpetions
 #### Exception Handling Research
-## Testing in PyCharm   
+## Testing in PyCharm  
+
+![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture13.png)
+Figure 13. Exception Handling for FileNotFoundError in Script
+
+![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture14.png)
+Figure 14. Exception Handling for ValueError in Script - 1
+
+![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture15.png)
+Figure 15. Exception Handling for ValueError in Script - 2
+
+
+![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture16.png)
+Figure 16. Exception Handling for Custom Exception ValueTooLargeError
+
+![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture17.png)
+Figure 17. Excpetion Handling for Custom Exception StopError
+
+
 ## Running in Terminal  
 ## Checking the Binary File 
 ## Summary 
