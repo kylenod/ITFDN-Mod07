@@ -10,7 +10,8 @@ This paper documents the process of creating a Python script that demonstrates p
 
 ## Writing the Script 
 
-[alt text](web address "tooltip text")
+
+[alt text](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture1.png "tooltip text")
 
 
 ### Script Overview
