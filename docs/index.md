@@ -11,7 +11,7 @@ This paper documents the process of creating a Python script that demonstrates p
 ## Writing the Script 
 
 
-[alt text](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture1.png "tooltip text")
+[Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture1.png "tooltip text")
 
 
 ### Script Overview
