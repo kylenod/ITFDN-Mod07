@@ -85,24 +85,24 @@ Figure 17. Excpetion Handling for Custom Exception StopError
 ## Running in Terminal 
 
 
-![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture18.png)
+![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture17.png)
 Figure 18. View Client List
 
-![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture19.png)
+![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture18.png)
 Figure 19. Add New Client
 
-![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture20.png)
+![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture19.png)
 Figure 20. Search Client Data
 
-![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture21.png)
+![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture20.png)
 Figure 21. Custom Exception ValueTooLargeError
 
-![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture22.png)
+![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture21.png)
 Figure 22. Custom Exception StopError
 
 ## Checking the Binary File 
 
-![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture23.png)
+![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture22.png)
 Figure 23. Viewing Data with Saved Binary Data
 
 ## Summary 
