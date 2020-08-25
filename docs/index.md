@@ -144,7 +144,7 @@ In addition to leveraging existing exceptions, Python makes it easy to create cu
 class ValueTooLargeError(Exception):
     """ Value too large for menu input """
     def __str__(self):
-        return '"Please select an option between 1-5!"'
+        return 'Please select an option between 1-5!'
 
 class StopError(Exception):
     """ Close program  """
