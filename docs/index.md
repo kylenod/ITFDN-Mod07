@@ -30,7 +30,7 @@ The data layer declares objects that are used by the program (Figure 2).
 ![Data Section of Script](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture2.png "Data Section of Script")   
 Figure 2. Data Section of Script  
 
-The processing section includes custom functions for processing, input/output function and custom exception classes (Figure 3-5).
+The processing section includes custom functions for processing, input/output functions and custom exception classes (Figure 3-5).
 ![Processing Functions](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture3.png "Processing Functions")
 Figure 3. Processing Functions
 
@@ -57,7 +57,6 @@ Listing 1
 
 #### Loading Data with Pickle
 The first custom function, read_data_from_file(), uses pickle.load() to read data from a binary file (the objFile is assigned to the file ClientData.dat in the data section). More specifically, the function is “de-serializing” data into Python data structures from the binary stream that it was previously saved to.  
-
 ```
 def read_data_from_file(file_name, list_of_clients):
     try:
@@ -72,8 +71,12 @@ Listing 2
 
 The pickle.load() function will only load one object at a time (picking up where it left off within the open file). In this case, the program saves the database to a single list object that can be loaded all at once, otherwise that would have to be further accounted for in the program. The file is opened in “rb” or “read binary” mode, because it needs to read data from a binary file.
 
+
+Figure 7 shows how binary data appears within a text editor. Although the format is not user-friendly, it is still somewhat interpretable.
 ![Binary File in Text Editor](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture7.png "Binary File in Text Editor")
 Figure 7. Binary File in Text Editor
+
+Once the data is loaded into a python list through pickling (Figure 8), it looks like a normal Python dictionary within a list (Figure 9).
 
 ![Loading Data with Pickle](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture8.png "Loading Data with Pickle")
 Figure 8. Loading Data with Pickle
@@ -82,7 +85,7 @@ Figure 8. Loading Data with Pickle
 Figure 9. Print Data Loaded from Binary File with Pickle
 
 #### Saving Data with Pickle 
-
+Pickling can also be used to store data. In the function save_data_to_file, I use pickle.dump() to “serialize” the current client data back to the binary format. In this case, the file is opened in “wb” or “write binary” mode to write data to a binary file.
 ```
     def save_data_to_file(file_name, list_of_clients):
         object_file = open(file_name, "wb")
@@ -94,15 +97,19 @@ Listing 3
 
 
 #### Pickling Research
+While working on this script, I read through several online resources about Python pickle. The one I found most useful was a Medium article appropriately titled **Pickling in Python** by Alison Salerno. I appreciated that was a high-level overview that did not presuppose prior knowledge of other programming languages. Other articles either seemed to provide a comprehensive overview of pickling parameters or were meant to address specific use-cases for developers. This article concisely distilled high-level concepts, balancing prose with images and code examples. The article is available at the following link:
+
+https://medium.com/swlh/pickling-in-python-ac3c7a045ae5
 
 
 ### Exception Handling
 #### Built-in Exceptions
 
+Another concept explored thoroughly in week 7 was Try-Except error handling. When an error occurs while running Python, the program provides information on the type of error the occurred. For example, if you try to cast a string of letters as an integer, Python will return a ValueError, because it cannot perform that function on that value (Figure 10):
 ![Built-in ValueError in Python](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture10.png "Built-in ValueError in Python")
 Figure 10. Built-in ValueError in Python
 
-
+Although we ideally prefer to avoid errors, there are many instances in which its helpful to identify different types of errors so that they can be handled appropriately within a program. Python has a large number of built-in errors known as exceptions that can be leveraged for this purpose. In the read_data_from_file() function used at the beginning of the script, I employed try-except clauses and the built-in FileNotFoundError to handle instances in which the file being read does not yet exist. 
 ```
 def read_data_from_file(file_name, list_of_clients):
     try:
@@ -115,12 +122,15 @@ def read_data_from_file(file_name, list_of_clients):
 ```
 Listing 4
 
+First, the function will try to load data from the object file. If the file is not found, it will skip to the except clause for FileNotFoundError and print the string below it. Because the error value already exists in Python, I was able to create the except clause without having to add much additional logic. When the except clause is reached, it will simply print the string from the statement and the program will continue running (Figure 11). By contrast, if I did not include the clause, the error would still occur, but the displayed message would not be user-friendly (Figures 12).
+
 ![FileNotFoundError without Exception Clause in Script](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture11.png "FileNotFoundError without Exception Clause in Script")
 Figure 11. FileNotFoundError without Exception Clause in Script
 
 ![FileNotFoundError with Excpetion Handling in Script](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture12.png "FileNotFoundError with Excpetion Handling in Script")
 Figure 12. FileNotFoundError with Excpetion Handling in Script
 
+In the get_client_data() function, I create an except clause for the built-in ValueError to catch instances in which the “age” input cannot be cast as an integer.
 ```
     def get_client_data():
         client = str(input("Enter name: \n ").capitalize())
@@ -133,9 +143,10 @@ Figure 12. FileNotFoundError with Excpetion Handling in Script
 ```
 Listing 5
 
+In this case, the try-except clause occurs within a while loop. If the user enters a non-integer value that goes to this exception, they will be prompted to reenter a menu option. Once they input a valid age, the loop breaks and the program moves on to the next line of code.
 
 #### Custom Excpetions
-
+In addition to leveraging existing exceptions, Python makes it easy to create custom exception classes derived from the same class. The advantage of the custom classes is that they can handle use-cases specific to your program design. In Assignment07.py, I created two custom classes shown in Listing 6.
 ```
 class ValueTooLargeError(Exception):
     """ Value too large for menu input """
@@ -149,7 +160,11 @@ class StopError(Exception):
 ```
 Listing 6
 
+The ValueTooLargeError catches instances in which the user menu option input is an integer above 5 (the menu options are 1-5).
 
+The StopError handles instances in which the user has implemented a non-integer string that clearly indicates they want to leave the program. This error is included to distinguish these inputs from more generic ValueErrors in which the user has simply entered a non-integer value.
+
+These exceptions are used in the main body of the script. 
 ```
 while True:
     IO.print_menu_tasks()
@@ -172,9 +187,20 @@ while True:
 ```
 Listing 7
 
+When users provide an input, I first check to see if the string matches any “quit” words. I then raise the custom StopError, which prints the string from the Exception and breaks the loop. 
 
+Next, I cast the input as an integer. If the input string cannot be cast as an integer, it will automatically raise a ValueError and go to the exception clauses for ValueError. If the input is an integer above 5, it was reach the ValueTooLargeError. Note that for the custom classes, the errors must be manually raised through logic built into the program. 
+
+If none of the exceptions are raised, the program goes to the else clause and executes one of the menu functions.
 
 #### Exception Handling Research
+I found two sites that were particularly helpful for learning about exception handling:
+•	TechBeamers (https://www.techbeamers.com/use-try-except-python/)
+•	Programiz (https://www.programiz.com/python-programming/user-defined-exception)
+
+Both pages provide high-level information about exceptions without including too much technical detail or requiring background knowledge of programming. The visual layouts make them easy to navigate and both use abundant images to help illustrate their points. Programiz has the additional feature of allowing visitors to run code directly on their site.
+
+
 ## Testing in PyCharm  
 
 ![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture13.png)
