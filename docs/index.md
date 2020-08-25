@@ -117,10 +117,10 @@ Listing 4
 
 First, the function will try to load data from the object file. If the file is not found, it will skip to the except clause for FileNotFoundError and print the string below it. Because the error value already exists in Python, I was able to create the except clause without having to add much additional logic. When the except clause is reached, it will simply print the string from the statement and the program will continue running (Figure 11). By contrast, if I did not include the clause, the error would still occur, but the displayed message would not be user-friendly (Figures 12).
 
-![FileNotFoundError without Exception Clause in Script](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture11.png "FileNotFoundError without Exception Clause in Script")
+![FileNotFoundError without Exception Clause in Script](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture12.png "FileNotFoundError without Exception Clause in Script")
 Figure 11. FileNotFoundError without Exception Clause in Script
 
-![FileNotFoundError with Excpetion Handling in Script](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture12.png "FileNotFoundError with Excpetion Handling in Script")
+![FileNotFoundError with Excpetion Handling in Script](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture11.png "FileNotFoundError with Excpetion Handling in Script")
 Figure 12. FileNotFoundError with Excpetion Handling in Script
 
 In the **get_client_data()** function, I create an except clause for the built-in ValueError to catch instances in which the “age” input cannot be cast as an integer.
