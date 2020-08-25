@@ -10,11 +10,8 @@ This paper documents the process of creating a Python script that demonstrates p
 
 ## Writing the Script 
 
-https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture1.png    
 
-https://github.com/kylenod/ITFDN-Mod07/blob/master/Images/Picture1.png
-
-[Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture1.png "tooltip text")
+![Screenshot of new script in PyCharm](https://raw.githubusercontent.com/kylenod/ITFDN-Mod07/master/Images/Picture1.png "Script in PyCharm")
 
 
 ### Script Overview
